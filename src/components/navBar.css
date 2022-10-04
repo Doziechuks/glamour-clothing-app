@@ -12,6 +12,9 @@
   top: 0;
   z-index: 1;
 }
+.logo-link{
+  color: #fff;
+}
 .nav-icon{
   font-size: 4rem;
 }
@@ -28,6 +31,19 @@
   color: #fff;
   font-size: 1.3rem;
   text-transform: uppercase;
+  transition: all 1s ease-in-out;
+}
+.option:hover{
+  border: 1px #fff solid;
+  border-radius: 0.1em;
+}
+.active{
+  border: 1px #fff solid;
+  padding: 0.2em;
+  background-color: whitesmoke;
+  opacity: 0.7;
+  color: black;
+  border-radius: 0.1em;
 }
 
 @media screen and (max-width: 500px) {
