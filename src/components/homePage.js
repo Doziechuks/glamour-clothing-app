@@ -1,4 +1,5 @@
 import HomeMenu from "./homeMenu";
+import './homePage.css'
 
 const HomePage = () => {
   return (
