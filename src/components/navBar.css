@@ -3,13 +3,14 @@
   width: 100%;
   background-color: rgb(27,27,50);
   color: #fff;
-  padding: 1em 1.5em;
+  padding: 0.5em 1.5em;
   margin-bottom: 2em;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: sticky;
   top: 0;
+  z-index: 1;
 }
 .nav-icon{
   font-size: 4rem;
@@ -27,4 +28,13 @@
   color: #fff;
   font-size: 1.3rem;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-wrapper{
+    padding: 0.3em 1.5em;
+  }
+  .pages{
+    display: none;
+  }
 }

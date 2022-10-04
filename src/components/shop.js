@@ -1,9 +1,10 @@
 import './shop.css';
+import ShopCollection from './shopCollection';
 
 const ShopPage = () => {
   return ( 
     <div className="shop-wrapper">
-      Shop Page
+      <ShopCollection />
     </div>
    );
 }

@@ -1,9 +1,8 @@
-.shop-wrapper{
+.collection-wrapper{
   border: 1px red solid;
   width: 100%;
-  padding: 0 1.5em;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
