@@ -3,16 +3,23 @@ import { Link } from "react-router-dom";
 import FormInput from "./formInput";
 import CustomButton from "./custom-button";
 import { FcGoogle } from "react-icons/fc";
+import { googleSignIn, auth } from "../firebase/firebase-config";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setEmail("");
-    setPassword("");
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+       setEmail("");
+       setPassword("");
+    } catch (error) {
+      console.log(error.message)
+    }
   };
   const handleEmail = (e) => {
     setEmail(e.target.value);
@@ -40,7 +47,7 @@ const SignIn = () => {
       />
       <div className="btn-wrapper">
         <CustomButton type="submit">sign in</CustomButton>
-        <CustomButton isGoogleSignIn>
+        <CustomButton isGoogleSignIn onClick={googleSignIn}>
           <FcGoogle className="google" />
           sign in with google
         </CustomButton>

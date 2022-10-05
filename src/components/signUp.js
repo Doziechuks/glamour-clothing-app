@@ -1,6 +1,8 @@
 import './signUp.css';
 import FormInput from './formInput';
 import CustomButton from './custom-button';
+import { auth } from '../firebase/firebase-config';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
 const SignUp = () => {
@@ -9,15 +11,20 @@ const SignUp = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [displayName, setDisplayName] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if(password !== confirmPassword){
       alert('password do not match')
     }
-    setEmail('');
-    setPassword('');
-    setConfirmPassword('');
-    setDisplayName('');
+    try {
+      await createUserWithEmailAndPassword(auth, email, password);
+      setEmail("");
+      setPassword("");
+      setConfirmPassword("");
+      setDisplayName("");
+    } catch (error) {
+      console.log(error.message)
+    }
   }
   const handleFullName = (e) => {
     setDisplayName(e.target.value)
