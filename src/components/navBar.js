@@ -37,7 +37,7 @@ const Navbar = () => {
           contact us
         </Link>
         <Link
-          to="/sign in"
+          to="/login"
           onClick={() => setActive("sign in")}
           className={`option ${active === "sign in" ? "active" : ""}`}
         >

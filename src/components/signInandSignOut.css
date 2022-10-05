@@ -1,0 +1,19 @@
+.signinandout{
+  border: 1px red solid;
+  padding: 0 1.5em;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3em;
+  width: 100%;
+}
+.phone{
+  width: 100%;
+  max-width: 40em;
+}
+
+@media screen and (max-width: 1000px) {
+  .phone{
+    display: none;
+  }
+}
