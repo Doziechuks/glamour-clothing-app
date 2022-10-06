@@ -1,4 +1,5 @@
 import './previewCollection.css';
+import CustomButton from './custom-button';
 
 const PreviewCollection = ({ item }) => {
   const {title, id, items, } = item;
@@ -12,13 +13,16 @@ const PreviewCollection = ({ item }) => {
             const { name, id, imageUrl, price } = item;
             return (
               <div className="items" key={id}>
-                <div 
+                <div
                   className="background"
-                  style={{backgroundImage: `url(${imageUrl})`}}
-                 />
+                  style={{ backgroundImage: `url(${imageUrl})` }}
+                />
                 <div className="info">
                   <h4>{name}</h4>
                   <h4>${price}</h4>
+                </div>
+                <div className="addto-cart">
+                  <CustomButton isAddToCart>add to cart</CustomButton>
                 </div>
               </div>
             );

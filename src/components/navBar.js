@@ -1,14 +1,17 @@
 import './navBar.css';
 import { BsFillBrightnessHighFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import CartIcon from './cartIcon';
+import CartDropdown from './cartDropdown';
 import { useState } from 'react';
 import { auth } from '../firebase/firebase-config';
 import { signOut } from 'firebase/auth';
 import { selectCurrentUser } from '../redux/userSelectore';
 import { connect } from 'react-redux';
+import { selectCartHidden } from "../redux/cartSelector";
 import { createStructuredSelector } from 'reselect';
 
-const Navbar = ({ currentUser }) => {
+const Navbar = ({ currentUser, cartHidden }) => {
   const [active, setActive] = useState('home');
   const handleSignOut = async () => {
     try {
@@ -46,7 +49,9 @@ const Navbar = ({ currentUser }) => {
           contact us
         </Link>
         {currentUser ? (
-          <div onClick={handleSignOut} className="option">sign out</div>
+          <div onClick={handleSignOut} className="option">
+            sign out
+          </div>
         ) : (
           <Link
             to="/login"
@@ -56,13 +61,16 @@ const Navbar = ({ currentUser }) => {
             sign in
           </Link>
         )}
+        <CartIcon />
       </div>
+      {cartHidden ? null : <CartDropdown />}
     </div>
   );
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
-})
+  currentUser: selectCurrentUser,
+  cartHidden: selectCartHidden
+});
  
 export default connect(mapStateToProps)(Navbar);

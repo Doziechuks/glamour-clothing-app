@@ -1,0 +1,27 @@
+.cartItem-wrapper{
+  border: 1px black solid;
+  width: 100%;
+  max-width: 19em;
+  height: 25em;
+  background-color: #fff;
+  padding: 0.5em;
+  position: absolute;
+  right: 0.8em;
+  top: 4.5em;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+}
+.cart-content{
+  border: 1px black solid;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow-y: scroll;
+}

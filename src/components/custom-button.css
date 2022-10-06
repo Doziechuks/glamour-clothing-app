@@ -5,7 +5,7 @@
   color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -25,6 +25,15 @@
 .google:hover {
   background-color: rgb(8, 88, 201);
   color: white;
+}
+.cart{
+  width: 100%;
+  background-color: #fff;
+  color: rgb(27, 27, 50);
+}
+.cart:hover{
+  color: #fff;
+  background-color: rgb(27, 27, 50);
 }
 
 @media screen and (max-width: 1000px) {

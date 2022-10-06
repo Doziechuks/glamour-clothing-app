@@ -1,0 +1,14 @@
+.icon-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.cart-icon{
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.quantity{
+  position: absolute;
+}
