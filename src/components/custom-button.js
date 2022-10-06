@@ -1,9 +1,9 @@
 import './custom-button.css';
 
-const CustomButton = ({ children, isGoogleSignIn, isMobile, ...otherProps }) => {
+const CustomButton = ({ children, isGoogleSignIn, ...otherProps }) => {
   return ( 
     <button 
-    className={`btn ${isGoogleSignIn ? 'google' : ''} ${isMobile ? 'mobile' : ''}`}
+    className={`btn ${isGoogleSignIn ? 'google' : ''}`}
     {...otherProps}
     >
       {children}

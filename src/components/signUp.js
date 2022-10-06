@@ -1,7 +1,7 @@
 import './signUp.css';
 import FormInput from './formInput';
 import CustomButton from './custom-button';
-import { auth } from '../firebase/firebase-config';
+import { auth, checkUser } from '../firebase/firebase-config';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
 
@@ -17,7 +17,8 @@ const SignUp = () => {
       alert('password do not match')
     }
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const { user } = await createUserWithEmailAndPassword(auth, email, password);
+      await checkUser(user, { FullName: displayName });
       setEmail("");
       setPassword("");
       setConfirmPassword("");

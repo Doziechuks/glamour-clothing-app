@@ -1,45 +1,37 @@
-.btn{
+.btn {
   border: none;
-  font-size: 1.1rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  padding: 0.8em 1.5em;
+  background-color: rgb(27, 27, 50);
   color: #fff;
-  background-color: rgb(27,27,50);
-  width: 100%;
-  max-width: 10em;
-  padding: 0.8em ;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: capitalize;
   cursor: pointer;
-  transition: all 1s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
-.btn:hover{
-  border: 1px rgb(27,27,50) solid;
-  color: rgb(27,27,50);
+.btn:hover {
+  border: 1px rgb(27, 27, 50) solid;
+  color: rgb(27, 27, 50);
   background-color: #fff;
 }
-.google{
-  max-width: 15em;
+.google {
+  background-color: rgb(9, 65, 144);
+  color: white;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 0.5em;
-  background-color: rgb(9, 65, 144);
+  justify-content: center;
+  gap: 1em;
 }
-.google:hover{
+.google:hover {
   background-color: rgb(8, 88, 201);
   color: white;
 }
-.mobile{
-  display: none;
-}
 
-@media screen and (max-width:1000px) {
-  .btn{
-    max-width: 100%;
+@media screen and (max-width: 1000px) {
+  .btn {
+    width: 100%;
   }
-  .google{
+  .google {
     justify-content: center;
-  }
-  .mobile{
-    display: block;
   }
 }

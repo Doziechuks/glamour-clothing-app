@@ -52,7 +52,7 @@ const SignIn = () => {
           sign in with google
         </CustomButton>
         <Link to= '/sign up' className="singup-link">
-          <CustomButton type="submit" isMobile>
+          <CustomButton type="submit">
             sign up
           </CustomButton>
         </Link>

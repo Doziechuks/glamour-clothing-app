@@ -9,6 +9,7 @@
   gap: 3em;
 }
 .btn-wrapper{
+  border: 1px red solid;
   width: 100%;
   display: flex;
   align-items: center;
@@ -20,6 +21,7 @@
 }
 .singup-link{
   width: 100%;
+  display: none;
 }
 
 @media screen and (max-width:1000px) {
@@ -27,7 +29,13 @@
     max-width: 100%;
   }
   .btn-wrapper{
+
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+  }
+  .singup-link{
+    display: block;
+    width: 100%;
   }
 }
