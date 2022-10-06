@@ -4,7 +4,7 @@ import Navbar from './components/navBar';
 import ShopPage from './components/shop';
 import SignInandSignOut from './components/signInandSignOut';
 import SignUp from './components/signUp';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { onSnapshot } from 'firebase/firestore';
 import { auth, checkUser } from './firebase/firebase-config';
@@ -30,12 +30,22 @@ function App({ currentUser, setCurrentUser }) {
   return (
     <div>
       <Navbar />
-      <Routes>
-        <Route exact path="/" element={<HomePage />} />
-        <Route exact path="/shop" element={<ShopPage />} />
-        <Route exact path="/login" element={<SignInandSignOut />} />
-        <Route exact path="/sign up" element={<SignUp />} />
-      </Routes>
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/shop" component={ShopPage} />
+        <Route
+          exact
+          path="/login"
+          render={() =>
+            currentUser ? <Redirect to="/" /> : <SignInandSignOut />
+          }
+        />
+        <Route
+          exact
+          path="/signUp"
+          render={() => (currentUser ? <Redirect to="/" /> : <SignUp />)}
+        />
+      </Switch>
     </div>
   );
 }

@@ -51,7 +51,7 @@ const SignIn = () => {
           <FcGoogle className="google" />
           sign in with google
         </CustomButton>
-        <Link to= '/sign up' className="singup-link">
+        <Link to= '/signUp' className="singup-link">
           <CustomButton type="submit">
             sign up
           </CustomButton>
