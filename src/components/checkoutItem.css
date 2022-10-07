@@ -1,0 +1,24 @@
+.checkoutItem-wrapper{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 1em 0;
+  border-bottom: 2px rgb(27, 27, 50) solid;
+}
+.image-container{
+  border-bottom: 1px red solid;
+  width: 100%;
+  max-width: 10em;
+  padding: 0.4em 0;
+}
+img{
+  width: 100%;
+  display: block;
+}
+.name, .num, .price, .remove-button{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 10em;
+}

@@ -1,5 +1,39 @@
 .checkout-wrapper{
   border: 1px red solid;
   width: 100%;
-  padding: 0 1.5em;
+  max-width: 70em;
+  min-height: 50em;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.checkout-header{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding: 1em 0;
+  border-bottom: 2px rgb(27, 27, 50) solid;
+}
+.header-block{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 12em;
+}
+.header-block p{
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+.total{
+  border: 1px red solid;
+  width: 100%;
+  max-width: 10em;
+  margin-top: 4em;
+  margin-left: auto;
+}
+.total p{
+  font-weight: bold;
+  font-size: 1.2rem;
 }
