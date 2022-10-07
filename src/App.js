@@ -4,6 +4,7 @@ import Navbar from './components/navBar';
 import ShopPage from './components/shop';
 import SignInandSignOut from './components/signInandSignOut';
 import SignUp from './components/signUp';
+import CheckoutPage from './components/checkout';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { onAuthStateChanged } from 'firebase/auth';
 import { onSnapshot } from 'firebase/firestore';
@@ -33,6 +34,7 @@ function App({ currentUser, setCurrentUser }) {
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={ShopPage} />
+        <Route exact path="/checkout" component={CheckoutPage} />
         <Route
           exact
           path="/login"

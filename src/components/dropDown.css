@@ -32,3 +32,11 @@
   height: 10em;
   background-color: black;
 }
+
+.empty{
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 7em 0;
+  color: rgb(27, 27, 50);
+}
