@@ -1,3 +1,4 @@
 export const cartType = {
-  toggleHiddenCart: 'toggelCartHiden'
+  toggleHiddenCart: 'toggelCartHiden',
+  addItemToCart: 'addItemToCart'
 }

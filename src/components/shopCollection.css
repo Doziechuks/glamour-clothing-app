@@ -5,4 +5,13 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  gap: 2.5em;
+}
+.preview{
+  border: 1px red solid;
+  width: 100%;
+  min-height: 22em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

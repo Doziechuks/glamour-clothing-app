@@ -2,7 +2,7 @@ import './navBar.css';
 import { BsFillBrightnessHighFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import CartIcon from './cartIcon';
-import CartDropdown from './cartDropdown';
+import CartDropdown from './dropDown';
 import { useState } from 'react';
 import { auth } from '../firebase/firebase-config';
 import { signOut } from 'firebase/auth';
