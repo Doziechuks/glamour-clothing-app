@@ -19,7 +19,7 @@
 .google{
   font-size: 1.5rem;
 }
-.singup-link{
+.signup-link{
   width: 100%;
   display: none;
 }
@@ -29,12 +29,11 @@
     max-width: 100%;
   }
   .btn-wrapper{
-
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
   }
-  .singup-link{
+  .signup-link{
     display: block;
     width: 100%;
   }

@@ -1,3 +1,24 @@
-.cartItem-wrapper{
-  color: red;
+.item-wrapper {
+  border: 1px red solid;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7em;
+}
+.cart-image {
+  display: block;
+  width: 100%;
+  max-width: 7em;
+}
+.others {
+  border: 1px red solid;
+  width: 100%;
+  max-width: 93em;
+}
+.others h4 {
+  color: rgb(27, 27, 50);
+}
+.others p {
+  color: rgb(27, 27, 50);
 }

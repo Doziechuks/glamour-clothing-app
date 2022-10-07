@@ -46,12 +46,12 @@ const SignIn = () => {
         required
       />
       <div className="btn-wrapper">
-        <CustomButton type="submit">sign in</CustomButton>
+        <CustomButton>sign in</CustomButton>
         <CustomButton isGoogleSignIn onClick={googleSignIn}>
           <FcGoogle className="google" />
           sign in with google
         </CustomButton>
-        <Link to= '/signUp' className="singup-link">
+        <Link to= '/signUp' className="signup-link">
           <CustomButton type="submit">
             sign up
           </CustomButton>
