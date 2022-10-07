@@ -8,7 +8,6 @@
   border-top: 2px rgb(27, 27, 50) solid;
 }
 .image-container{
-  border-bottom: 1px red solid;
   width: 100%;
   max-width: 10em;
   padding: 0.4em 0;
@@ -22,4 +21,32 @@ img{
   color: rgb(27, 27, 50);
   width: 100%;
   max-width: 10em;
+}
+.for-mobile{
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .checkoutItem-wrapper{
+    flex-direction: column;
+    border: none;
+    margin-bottom: 0;
+    padding: 0;
+    /* margin-top: 1em; */
+  }
+  .image-container{
+    max-width: 100%;
+  }
+  .name, .num, .price, .remove-button{
+  display: none;
+}
+.for-mobile{
+  display: block;
+  margin-bottom: 0.5em;
+  max-width: 100%;
+  font-size: 1.3rem;
+}
+.for-mobile:last-child{
+  margin-bottom: 1.5em;
+}
 }
