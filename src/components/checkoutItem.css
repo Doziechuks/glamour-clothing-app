@@ -5,7 +5,7 @@
   justify-content: space-between;
   margin-bottom: 2em;
   padding: 1em 0;
-  border-bottom: 2px rgb(27, 27, 50) solid;
+  border-top: 2px rgb(27, 27, 50) solid;
 }
 .image-container{
   border-bottom: 1px red solid;
@@ -19,6 +19,7 @@ img{
 }
 .name, .num, .price, .remove-button{
   border: 1px red solid;
+  color: rgb(27, 27, 50);
   width: 100%;
   max-width: 10em;
 }
