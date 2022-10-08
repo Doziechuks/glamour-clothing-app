@@ -7,6 +7,7 @@ import { createStructuredSelector } from 'reselect';
 
 const CheckoutPage = ({ cartItems, total }) => {
   return (
+    
     <div className="checkout-wrapper">
       <div className="checkout-header">
         <div className="header-block">
@@ -26,9 +27,11 @@ const CheckoutPage = ({ cartItems, total }) => {
         </div>
       </div>
       {
+        cartItems.length ? 
         cartItems.map((cartItem) => {
           return <CheckoutItem key={cartItem.id} cartItem={cartItem} />
         })
+        : <p className='cart-empty'>your Cart is empty</p>
       }
       <div className="total">
         <p>TOTAL: ${total}</p>

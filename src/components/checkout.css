@@ -25,6 +25,10 @@
   text-transform: capitalize;
   font-size: 1.2rem;
 }
+.cart-empty{
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
 .total{
   border: 1px red solid;
   width: 100%;

@@ -21,6 +21,24 @@ img{
   color: rgb(27, 27, 50);
   width: 100%;
   max-width: 10em;
+  font-size: 1.2rem;
+  padding-left: 1em;
+}
+.num{
+  display: flex;
+  align-items: center;
+}
+.arrow{
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+.quant{
+  margin: 0 0.5em;
+}
+.utf{
+  max-width: 1em;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 .for-mobile{
   display: none;
@@ -32,7 +50,6 @@ img{
     border: none;
     margin-bottom: 0;
     padding: 0;
-    /* margin-top: 1em; */
   }
   .image-container{
     max-width: 100%;
@@ -45,8 +62,19 @@ img{
   margin-bottom: 0.5em;
   max-width: 100%;
   font-size: 1.3rem;
+  padding-left: 0.5em;
 }
 .for-mobile:last-child{
   margin-bottom: 1.5em;
+}
+.arrows{
+  border: 1px red solid;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+.mobile-arrow{
+  display: flex;
+  align-items: center;
 }
 }
