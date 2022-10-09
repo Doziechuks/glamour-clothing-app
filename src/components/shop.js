@@ -1,8 +1,10 @@
 import './shop.css';
-import ShopData from './shopData';
 import ShopCollection from './shopCollection';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectShopCollections } from '../redux/shopSelector';
 
-const ShopPage = () => {
+const ShopPage = ({ ShopData}) => {
   return ( 
     <div className="shop-wrapper">
       {
@@ -14,4 +16,7 @@ const ShopPage = () => {
    );
 }
  
-export default ShopPage;
+const mapStateToProps = createStructuredSelector({
+  ShopData: selectShopCollections
+})
+export default connect(mapStateToProps)(ShopPage);

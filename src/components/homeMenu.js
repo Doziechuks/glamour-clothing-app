@@ -1,8 +1,10 @@
-import data from "./homeData";
 import HomeItems from "./homeItems";
 import './homeMenu.css';
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
+import { selectHomeData } from "../redux/homeSelector";
 
-const HomeMenu = () => {
+const HomeMenu = ({ data }) => {
   return ( 
     <div className="menu-wrapper">
       {
@@ -16,4 +18,7 @@ const HomeMenu = () => {
    );
 }
  
-export default HomeMenu;
+const mapStateToProps = createStructuredSelector({
+  data: selectHomeData
+})
+export default connect(mapStateToProps)(HomeMenu);
