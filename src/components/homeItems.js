@@ -1,8 +1,9 @@
 import './homeItems.css';
+import { withRouter } from 'react-router-dom';
 
-const HomeItems = ({ title, imageUrl, size }) => {
+const HomeItems = ({ title, imageUrl, size, linkUrl, history, match }) => {
   return ( 
-    <div className={`homeItem-wrapper ${size}`}>
+    <div className={`homeItem-wrapper ${size}`} onClick={() => history.push(`${match.url}${linkUrl}`)}>
       <div 
         className='background-image'
         style={{backgroundImage: `url(${imageUrl})`}}
@@ -15,4 +16,4 @@ const HomeItems = ({ title, imageUrl, size }) => {
    );
 }
  
-export default HomeItems;
+export default withRouter(HomeItems);
