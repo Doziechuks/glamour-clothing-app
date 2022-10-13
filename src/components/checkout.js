@@ -1,5 +1,6 @@
 import './checkout.css';
 import CheckoutItem from './checkoutItem';
+import PayStackBtn from '../payStack/payStack';
 import { connect } from 'react-redux';
 import { selectAddCartItem } from '../redux/cartSelector';
 import { selectCartTotalPrice } from '../redux/cartSelector';
@@ -36,6 +37,7 @@ const CheckoutPage = ({ cartItems, total }) => {
       <div className="total">
         <p>TOTAL: ${total}</p>
       </div>
+      <PayStackBtn price={total} />
     </div>
   );
 }
