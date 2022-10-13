@@ -1,12 +1,25 @@
 import './collectionPage.css';
-import previewCollection from './previewCollection';
+import { selectCollection } from '../redux/shopSelector';
+import { connect } from 'react-redux';
+import PreviewCollection from './previewCollection';
 
-const CollectionPage = () => {
+const CollectionPage = ({ collection }) => {
+  const { title, items} = collection;
   return (
-    <div>
-      <h2 style={{color: 'red'}}>Collection Page</h2>
+    <div className="collectionPage-wrapper">
+      <h2 className='collection-title'>{ title.toUpperCase() }</h2>
+      <div className="collectionPage-items">
+        {
+          items.map((item) => {
+            return <PreviewCollection key={item.id} item={item} />;
+          })
+        }
+      </div>
     </div>
   );
-  
 }
-export default CollectionPage;
+
+const mapStateToProps = (state, ownProps) => ({
+  collection: selectCollection(ownProps.match.params.collectionId)(state)
+})
+export default connect(mapStateToProps)(CollectionPage);
