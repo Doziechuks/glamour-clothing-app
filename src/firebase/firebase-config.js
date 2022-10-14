@@ -3,12 +3,12 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA_V7XVBwW_sbCR7XhxhRo9iu5gIfi7HNU",
+  apiKey: `${process.env.REACT_APP_FIREBASE_API_KEY}`,
   authDomain: "glamour-clothing.firebaseapp.com",
   projectId: "glamour-clothing",
-  storageBucket: "glamour-clothing.appspot.com",
-  messagingSenderId: "915113671797",
-  appId: "1:915113671797:web:96231c6c31e8a9488ecc3c",
+  storageBucket: `${process.env.REACT_APP_FIREBASE_storageBucket}`,
+  messagingSenderId: `${process.env.REACT_APP_FIREBASE_messagingSenderId}`,
+  appId: `${process.env.REACT_APP_FIREBASE_messagingSenderId}`,
 };
 
 const app = initializeApp(firebaseConfig);
