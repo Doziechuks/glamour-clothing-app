@@ -27,7 +27,7 @@ const ContactPage = () => {
     setFullName('');
     setMessage('');
     setPhone('');
-
+    
     alert('Thank you for reaching out to use!!');
   }
   return (
