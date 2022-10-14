@@ -16,3 +16,7 @@
   font-size: 1.5rem;
   display: block;
 }
+.contact-form{
+  width: 100%;
+  max-width: 30em;
+}

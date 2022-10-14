@@ -35,6 +35,11 @@
 .hide-sign-Up{
   display: none;
 }
+.contact-page{
+  width: 100%;
+  max-width: 10em;
+  margin: 1.5em 11em;
+}
 
 @media screen and (max-width: 1000px) {
   .custom-btn {
@@ -46,5 +51,10 @@
   }
   .hide-sign-Up{
   display: block;
+}
+.contact-page{
+  width: 100%;
+  max-width: 100%;
+  margin: 1.5em 0;
 }
 }

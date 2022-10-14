@@ -54,16 +54,6 @@ const SignIn = ({ history }) => {
           sign up
         </CustomButton>
       </div>
-      {/* <div className="">
-        <CustomButton>sign in</CustomButton>
-        <CustomButton onClick={googleSignIn} isGoogleSignIn>
-          <FcGoogle className="google" />
-          sign in with google
-        </CustomButton>
-        <Link to="/signUp" className="signup-link">
-          <CustomButton type="submit">sign up</CustomButton>
-        </Link>
-      </div> */}
     </form>
   );
 };
