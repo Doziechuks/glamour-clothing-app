@@ -40,7 +40,6 @@
 button{
   border: none;
   color: #fff;
-  margin-left: auto;
   margin-top: 1em;
   margin-bottom: 1em;
   font-size: 1.3rem;
@@ -59,5 +58,8 @@ button:hover{
   .checkout-header{
     display: none;
     max-width: 100%;
+  }
+  button{
+    width: 100%;
   }
 }

@@ -3,7 +3,7 @@ import { PaystackButton } from "react-paystack";
 const PayStackBtn = ({ price }) => {
   const cash = price * 100;
   const toNaira = cash * 730;
-  const publicKey = `${process.env.REACT_APP_PAY_STACK_publicKey}`;
+  const publicKey = "pk_test_28ace95a0c5d19ba9a4d635c7854a2c8ef0e873d";
 
   const handleSuccess = (success) => {
     console.log(success);
