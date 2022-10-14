@@ -1,6 +1,7 @@
 import "./App.css";
 import HomePage from "./components/homePage";
 import Navbar from "./components/navBar";
+import MobileNavBar from "./components/mobileNav";
 import SignInandSignOut from "./components/signInandSignOut";
 import SignUp from "./components/signUp";
 import CheckoutPage from "./components/checkout";
@@ -32,6 +33,7 @@ function App({ currentUser, setCurrentUser }) {
   return (
     <div>
       <Navbar />
+      <MobileNavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
         <Route exact path="/shop" component={ShopPage} />

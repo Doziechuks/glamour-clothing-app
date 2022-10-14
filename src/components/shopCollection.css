@@ -1,5 +1,4 @@
 .collection-wrapper{
-  border: 1px red solid;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
   gap: 2.5em;
 }
 .preview{
-  border: 1px red solid;
   width: 100%;
   min-height: 22em;
   display: flex;

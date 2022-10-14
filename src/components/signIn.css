@@ -1,5 +1,4 @@
 .form{
-  border: 1px red solid;
   width: 100%;
   max-width: 45em;
   display: flex;
@@ -8,33 +7,16 @@
   justify-content: center;
   gap: 3em;
 }
-.btn-wrapper{
-  border: 1px red solid;
+.my-btn{
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1em;
 }
-.google{
-  font-size: 1.5rem;
-}
-.signup-link{
-  width: 100%;
-  display: none;
+span{
+  margin-right: 0.5em;
 }
 
 @media screen and (max-width:1000px) {
   .form{
     max-width: 100%;
   }
-  .btn-wrapper{
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  .signup-link{
-    display: block;
-    width: 100%;
-  }
+  
 }

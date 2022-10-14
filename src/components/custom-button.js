@@ -1,9 +1,9 @@
 import './custom-button.css';
 
-const CustomButton = ({ children, isGoogleSignIn, isAddToCart, ...otherProps }) => {
+const CustomButton = ({ children, isGoogleSignInMain, isAddToCart,isHideSignUp, ...otherProps }) => {
   return ( 
     <button 
-    className={`btn ${isGoogleSignIn ? 'google' : ''} ${isAddToCart ? 'cart' : ''}`}
+    className={`custom-btn ${isGoogleSignInMain ? 'googleMain' : ''} ${isAddToCart ? 'cart' : ''} ${isHideSignUp ? 'hide-sign-Up' : ''}`}
     {...otherProps}
     >
       {children}

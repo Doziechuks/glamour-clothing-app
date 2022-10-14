@@ -1,4 +1,4 @@
-.btn {
+.custom-btn {
   border: none;
   padding: 0.8em 1.5em;
   background-color: rgb(27, 27, 50);
@@ -14,15 +14,12 @@
   color: rgb(27, 27, 50);
   background-color: #fff;
 }
-.google {
+.googleMain {
   background-color: rgb(9, 65, 144);
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
+  margin-left: 1em;
 }
-.google:hover {
+.googleMain:hover {
   background-color: rgb(8, 88, 201);
   color: white;
 }
@@ -35,12 +32,19 @@
   color: #fff;
   background-color: rgb(27, 27, 50);
 }
+.hide-sign-Up{
+  display: none;
+}
 
 @media screen and (max-width: 1000px) {
-  .btn {
+  .custom-btn {
     width: 100%;
   }
-  .google {
+  .googleMain {
     justify-content: center;
+    margin-left: 0;
   }
+  .hide-sign-Up{
+  display: block;
+}
 }

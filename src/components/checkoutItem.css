@@ -17,7 +17,6 @@ img{
   display: block;
 }
 .name, .num, .price, .remove-button{
-  border: 1px red solid;
   color: rgb(27, 27, 50);
   width: 100%;
   max-width: 10em;
@@ -68,7 +67,6 @@ img{
   margin-bottom: 1.5em;
 }
 .arrows{
-  border: 1px red solid;
   display: flex;
   align-items: center;
   gap: 0.5em;
