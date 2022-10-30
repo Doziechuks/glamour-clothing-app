@@ -1,9 +1,9 @@
 import './navBar.css';
 import { BsFillBrightnessHighFill } from "react-icons/bs";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import CartIcon from './cartIcon';
 import CartDropdown from './dropDown';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { auth } from '../firebase/firebase-config';
 import { signOut } from 'firebase/auth';
 import { selectCurrentUser } from '../redux/userSelectore';
@@ -12,7 +12,12 @@ import { selectCartHidden } from "../redux/cartSelector";
 import { createStructuredSelector } from 'reselect';
 
 const Navbar = ({ currentUser, cartHidden }) => {
-  const [active, setActive] = useState('home');
+  const [path, setPath] = useState('');
+  const { pathname } = useLocation();
+  useEffect(()=>{
+    setPath(pathname);
+  }, [pathname])
+
   const handleSignOut = async () => {
     try {
       await signOut(auth)
@@ -23,28 +28,25 @@ const Navbar = ({ currentUser, cartHidden }) => {
 
   return (
     <div className="nav-wrapper">
-      <Link to="/" onClick={() => setActive("home")} className="logo-link">
+      <Link to="/">
         <BsFillBrightnessHighFill className="nav-icon" />
       </Link>
       <div className="pages">
         <Link
           to="/"
-          onClick={() => setActive("home")}
-          className={`option ${active === "home" ? "active" : ""}`}
+          className={`option ${path === '/' ? 'active' : ''}`}
         >
           Home
         </Link>
         <Link
           to="/shop"
-          onClick={() => setActive("shop")}
-          className={`option ${active === "shop" ? "active" : ""}`}
+          className={`option ${path.includes('/shop') ? 'active' : ''}`}
         >
           shop
         </Link>
         <Link
           to="/contact"
-          onClick={() => setActive("contact")}
-          className={`option ${active === "contact" ? "active" : ""}`}
+          className={`option ${path.includes('/contact') ? 'active' : ''}`}
         >
           contact us
         </Link>
@@ -55,8 +57,7 @@ const Navbar = ({ currentUser, cartHidden }) => {
         ) : (
           <Link
             to="/login"
-            onClick={() => setActive("sign in")}
-            className={`option ${active === "sign in" ? "active" : ""}`}
+            className={`option ${path.includes('/login') ? 'active' : ''}`}
           >
             sign in
           </Link>
