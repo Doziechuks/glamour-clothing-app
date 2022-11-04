@@ -5,11 +5,15 @@ import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
 import './cartIcon.css';
 
-const CartIcon = ({ toggleCartHidden, itemCount }) => {
+const CartIcon = ({ toggleCartHidden, itemCount, isMobileCartIcon }) => {
   return (
     <div className="icon-wrapper" onClick={toggleCartHidden}>
-      <BsCart className="cart-icon"/>
-      <p className="quantity">{itemCount}</p>
+      <BsCart
+        className={`cart-icon ${isMobileCartIcon && "mobile-cart-icon"}`}
+      />
+      <p className={`quantity ${isMobileCartIcon && "mobile-cart-icon"}`}>
+        {itemCount}
+      </p>
     </div>
   );
 };
