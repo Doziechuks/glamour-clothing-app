@@ -26,7 +26,7 @@ function App({ currentUser, setCurrentUser }) {
         onSnapshot(userRef, (getSnapShot) => {
           setCurrentUser(getSnapShot.data());
         });
-        console.log(setCurrentUser);
+        // console.log(setCurrentUser);
       }
       setCurrentUser(res);
     });

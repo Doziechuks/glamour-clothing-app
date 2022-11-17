@@ -12,6 +12,7 @@ import { selectCartHidden } from "../redux/cartSelector";
 import { createStructuredSelector } from 'reselect';
 
 const Navbar = ({ currentUser, cartHidden }) => {
+  console.log(currentUser)
   const [path, setPath] = useState('');
   const { pathname } = useLocation();
   useEffect(()=>{
